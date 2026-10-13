@@ -7,5 +7,5 @@ FROM alpine
 VOLUME /scripts
 WORKDIR /root/
 COPY --from=0 /work/bash-exporter /root/
-#COPY ./examples/* /scripts/
+COPY ./examples/* /scripts/
 ENTRYPOINT ["/root/bash-exporter"]

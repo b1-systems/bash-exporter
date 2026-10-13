@@ -2,17 +2,13 @@
 
 Simple & minimalistic Prometheus exporter for bash scripts.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/gree-gorey/bash-exporter)](https://goreportcard.com/report/github.com/gree-gorey/bash-exporter)  
-[![](https://images.microbadger.com/badges/image/greegorey/bash-exporter.svg)](https://microbadger.com/images/greegorey/bash-exporter "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/greegorey/bash-exporter.svg)](https://microbadger.com/images/greegorey/bash-exporter "Get your own version badge on microbadger.com")
-
 ## Installation
-Use [Docker image](https://hub.docker.com/r/greegorey/bash-exporter/) or binary file from [releases](https://github.com/gree-gorey/bash-exporter/releases).
+Use [Docker image](https://github.com/b1-systems/bash-exporter/pkgs/container/bash-exporter) or use `go install github.com/b1-systems/bash-exporter@latest`.
 
 ## Docker quick start
 
 ```console
-$ docker run -v $PWD/examples:/scripts -p 9300:9300 greegorey/bash-exporter:2.0.0
+$ docker run -v $PWD/examples:/scripts -p 9300:9300 ghcr.io/b1-systems/bash-exporter:master
 ```
 
 ```console
@@ -41,7 +37,7 @@ Usage of ./bash-exporter:
     	Address on which to expose metrics (default ":9300")
 ```  
 
-Just point `-path` flag to the directory with your bash scripts. Names of the files (`(.*).sh`) will be used as the `job` label. Bash scripts should return valid json (see [examples](https://github.com/gree-gorey/bash-exporter/tree/master/examples)).
+Just point `-path` flag to the directory with your bash scripts. Names of the files (`(.*).sh`) will be used as the `job` label. Bash scripts should return valid json (see [examples](https://github.com/b1-systems/bash-exporter/tree/master/examples)).
 
 Example output:
 ```console
