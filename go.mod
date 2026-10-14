@@ -1,4 +1,4 @@
-module bash-exporter
+module github.com/b1-systems/bash-exporter
 
 go 1.26.8
 
