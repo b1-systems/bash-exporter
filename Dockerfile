@@ -8,4 +8,6 @@ VOLUME /scripts
 WORKDIR /root/
 COPY --from=0 /work/bash-exporter /root/
 COPY ./examples/* /scripts/
+
+EXPOSE 9300/tcp
 ENTRYPOINT ["/root/bash-exporter"]
